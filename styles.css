@@ -257,6 +257,7 @@ nav {
 .links a:hover {
   color: var(--clr-grey-1);
 }
+
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
@@ -301,7 +302,7 @@ nav {
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-    url(./hero-bcg.jpeg) center/cover no-repeat;
+    url(./assets/coverimage.jpg) center/cover no-repeat;
 }
 .banner {
   min-height: 100vh;
@@ -333,13 +334,25 @@ header {
   color: var(--clr-secondary);
 }
 #about,
-#services,
-#tours {
+#equipment,
+#djs {
   height: 80vh;
 }
-#services {
+#equipment {
   background: var(--clr-white);
 }
+
+/*MY CSS STARTS HERE*/
+.about-container{
+  background-color: lightgray;
+  padding: 2.5em;
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+
+
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
