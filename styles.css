@@ -182,6 +182,7 @@ Scroll
 nav {
   background: var(--clr-white);
   padding: 1rem 1.5rem;
+  z-index: 1;
 }
 /* fixed nav */
 .fixed-nav {
@@ -218,7 +219,7 @@ nav {
   color: var(--clr-primary-1);
 }
 .logo {
-  height: 50px;
+  height: 70px;
 }
 .links-container {
   height: 0;
@@ -295,9 +296,16 @@ header {
   place-items: center;
   text-align: center;
 }
+.container {
+  background-color: hsla(0, 0%, 0%, 0.473);
+  padding: 3em;
+  border-radius: 1em;
+}
+
 .container h1 {
   color: var(--clr-white);
   text-transform: uppercase;
+  font-family: 'Vina Sans', sans-serif;
 }
 .container p {
   color: var(--clr-white);
@@ -314,14 +322,16 @@ header {
 .title h2 {
   text-align: center;
   text-transform: uppercase;
+  padding-top: 2em;
 }
 .title span {
   color: var(--clr-gold);
-}
+} 
+
 #about,
 #contact,
 #faq {
-  height: 80vh;
+  height: fit-content;
 }
 #equipment, #faq {
   background: var(--clr-white);
@@ -331,20 +341,65 @@ header {
 /*About*/
 .about-container{
   /*background-color: #441C55;*/
-  border: 2px solid purple;
   padding: 4em;
-  width: 90%;
+  width: 75%;
   margin: auto;
   margin-top: 2em;
+  --borderWidth: 3px;
+  background: white;
+  position: relative;
+  border-radius: var(--borderWidth);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.about-container:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg,  #FFDF00, #DC9200, #E2A4C6, #B668A1, #743282, #441C55);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+.mission{
+  font-weight: 600;
+  text-align: center;
+}
+
+.img-about{
+  display: flex;
+  gap: 2em;
+  padding: 1em;
+}
+
+.about-images{
+  object-fit: cover;
+  height: 200px;
+  border: 0.25rem solid var(--clr-gold);
+  border-radius: var(--radius);
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .about-container p{
   color:black;
 }
 
-.mission {
-  
-}
 
 /*Equipment*/
 .equipment{
@@ -352,11 +407,29 @@ header {
 }
 
 /*Contact Us*/
+
+#contact{
+  background-image: url(assets/coverimage.jpg);
+}
+
+#contact h2, h3{
+  color: white;
+}
+
+.contactsubtitle{
+  text-align: center;
+  font-size: 1em;
+  padding: 2em;
+}
+
 .contactus{
   width: 80%;
   margin: auto;
   padding: 3em;
-  border: 2px solid black;
+  background-color: #441C55;
+  color: var(--clr-grey-2);
+  border-radius: 1.33em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 input[type=text], select, textarea {
@@ -371,17 +444,25 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-white);
   cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  color: var(--clr-white);
+  background: var(--clr-primary-2);
 }
+
 
 /*
 =============== 
@@ -390,10 +471,15 @@ Questions
 */
 #faq{
   height: fit-content;
+  background-image: url("/assets/musicnotes.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section-center {
   max-width: var(--fixed-width);
+  padding: 3em;
 }
 .question {
   background: var(--clr-white);
@@ -424,6 +510,7 @@ Questions
 }
 .question-btn:hover {
   transform: rotate(90deg);
+  color: var(--clr-primary-2);
 }
 .question-text {
   padding: 1rem 0 1.5rem 0;
@@ -529,7 +616,7 @@ Menu
   margin: 0 auto;
   max-width: 1170px;
   display: grid;
-  gap: 3rem 2rem;
+  gap: 5rem 5rem;
   justify-items: center;
 }
 .menu-item {
@@ -558,6 +645,15 @@ Menu
   margin-bottom: 0;
   padding-top: 1rem;
 }
+@media only screen and (max-width: 600px){
+  .btn-container {
+    flex-direction: column;
+    gap: 1em;
+    width: 15em;
+    margin: auto;
+  };
+}
+
 
 @media screen and (min-width: 768px) {
   .menu-item {
