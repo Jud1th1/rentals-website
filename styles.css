@@ -651,7 +651,10 @@ Menu
     gap: 1em;
     width: 15em;
     margin: auto;
-  };
+  }
+  .img-about{
+    flex-direction: column;
+  }
 }
 
 
