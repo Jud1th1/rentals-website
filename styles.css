@@ -13,37 +13,22 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
+  --clr-primary-1: hsl(280, 50%, 22%);
   /* primary/main color */
-  --clr-primary-5: #49a6e9;
+  --clr-primary-2: #743282;
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-primary-1: hsl(316, 35%, 56%);
+  --clr-primary-2: hsl(327, 52%, 76%);
+  /* grey */
+  --clr-grey-1: #46494c;
+  --clr-grey-2: #c5c3c6;
+  /* accent colors*/
   --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-secondary: hsla(182, 63%, 54%);
-  --clr-black: #222;
+  --clr-black: #000;
+  --clr-yellow: hsl(52, 100%, 50%);
+  --clr-gold: hsl(40, 100%, 43%);
+
+  /* fonts */
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
@@ -71,7 +56,7 @@ html {
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
+  background: whitesmoke;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -113,7 +98,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-1);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -143,13 +128,13 @@ p {
 .btn {
   text-transform: uppercase;
   background: transparent;
-  color: var(--clr-black);
+  color: var(--clr-white);
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
   display: inline-block;
   transition: var(--transition);
   font-size: 0.875rem;
-  border: 2px solid var(--clr-black);
+  border: 2px solid var(--clr-white);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
@@ -211,7 +196,7 @@ nav {
   color: var(--clr-grey-1);
 }
 .fixed-nav .links a:hover {
-  color: var(--clr-secondary);
+  color: var(--clr-primary-2);
 }
 /* .fixed-nav .links-container {
   height: auto !important;
@@ -230,7 +215,7 @@ nav {
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: var(--clr-secondary);
+  color: var(--clr-primary-1);
 }
 .logo {
   height: 50px;
@@ -245,7 +230,7 @@ nav {
 }
 .links a {
   background: var(--clr-white);
-  color: var(--clr-grey-5);
+  color: var(--clr-primary-2);
   font-size: 1.1rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
@@ -301,7 +286,7 @@ nav {
 /* hero */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(0deg, rgba(68,28,85,0.3757878151260504) 27%, rgba(220,146,0,0.4738270308123249) 100%),
     url(./assets/coverimage.jpg) center/cover no-repeat;
 }
 .banner {
@@ -331,27 +316,40 @@ header {
   text-transform: uppercase;
 }
 .title span {
-  color: var(--clr-secondary);
+  color: var(--clr-gold);
 }
 #about,
-#equipment,
-#djs {
+#contact,
+#faq {
   height: 80vh;
 }
-#equipment {
+#equipment, #faq {
   background: var(--clr-white);
 }
 
 /*MY CSS STARTS HERE*/
+/*About*/
 .about-container{
-  background-color: lightgray;
-  padding: 2.5em;
+  /*background-color: #441C55;*/
+  border: 2px solid purple;
+  padding: 4em;
   width: 90%;
   margin: auto;
   margin-top: 2em;
 }
 
+.about-container p{
+  color:black;
+}
 
+.mission {
+
+}
+
+/*Equipment*/
+.equipment{
+  height: fit-content;
+}
 
 footer {
   background: var(--clr-grey-1);
@@ -395,5 +393,87 @@ footer p {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/*
+=============== 
+Menu
+===============
+*/
+.btn-container {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.filter-btn {
+  background: transparent;
+  border-color: var(--clr-gold);
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  border-radius: var(--radius);
+  padding: 0.375rem 0.75rem;
+  color: var(--clr-gold);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.filter-btn:hover {
+  background: var(--clr-gold);
+  color: var(--clr-white);
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+}
+.photo {
+  object-fit: cover;
+  height: 200px;
+  border: 0.25rem solid var(--clr-gold);
+  border-radius: var(--radius);
+}
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted var(--clr-grey-5);
+}
+.item-info h4 {
+  margin-bottom: 0.5rem;
+}
+.price {
+  color: var(--clr-gold);
+}
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+  .photo {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 150px;
   }
 }
