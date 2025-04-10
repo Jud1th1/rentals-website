@@ -219,18 +219,20 @@ const menu = [
     let displayMenu = menuItems.map(function (item) {
       // console.log(item);
   
-      return `<article class="menu-item">
-            <img src=${item.img} alt=${item.title} class="photo" />
-            <div class="item-info">
-              <section>
-                <h4>${item.title}</h4>
-                <h4 class="price">$${item.price}</h4>
-              </section>
-              <p class="item-text">
-                ${item.desc}
-              </p>
+      return `
+      <article class="menu-item">
+        <div class="menu-card">
+          <img src="${item.img}" alt="${item.title}" class="photo" />
+          <div class="menu-content">
+            <div class="menu-header">
+              <h4 class="menu-title">${item.title}</h4>
+              <h4 class="price">$${item.price}</h4>
             </div>
-          </article>`;
+            <p class="item-text">${item.desc}</p>
+          </div>
+        </div>
+      </article>
+    `;
     });
     displayMenu = displayMenu.join("");
     // console.log(displayMenu);
