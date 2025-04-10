@@ -90,7 +90,7 @@ const menu = [
       title: "DJ Mixer",
       category: "Mixers",
       price: 200,
-      img: "./assets/mixer1.jpg",
+      img: "./assets/images/mixer1.jpg",
       desc: `This professional-grade DJ mixer is a powerful and versatile tool for any DJ or music producer. With multiple channels, built-in effects, and precise control over EQ and volume, this mixer allows you to create dynamic and engaging mixes that keep the crowd dancing all night long.`,
     },
     {
@@ -98,7 +98,7 @@ const menu = [
       title: "USB Turntable",
       category: "Turntables",
       price: 40,
-      img: "./assets/turntable2.jpg",
+      img: "./assets/images/turntable2.jpg",
       desc: `With a built-in USB interface, these turntables allow users to digitize their vinyl records by connecting the turntable directly to a computer.`,
     },
     {
@@ -106,7 +106,7 @@ const menu = [
         title: "Direct Drive Turntable",
         category: "Turntables",
         price: 60,
-        img: "./assets/turntable3.jpg",
+        img: "./assets/images/turntable3.jpg",
         desc: `The most popular type of turntables among DJs. These turntables have a motor that is directly connected to the platter, providing fast start-up times and stable playback speed. `,
       },
       {
@@ -114,7 +114,7 @@ const menu = [
         title: "Analog Mixer",
         category: "Mixers",
         price: 160,
-        img: "./assets/mixer2.jpg",
+        img: "./assets/images/mixer2.jpg",
         desc: `This classic analog mixer is an essential tool for DJs who value the warm, vintage sound of analog audio processing. With its simple and intuitive design, it allows you to control multiple audio sources and create dynamic and engaging mixes that showcase your skills and creativity.`,
       },
       {
@@ -122,7 +122,7 @@ const menu = [
         title: "Belt Drive Turntable",
         category: "Turntables",
         price: 20,
-        img: "./assets/turntable1.jpg",
+        img: "./assets/images/turntable1.jpg",
         desc: `At home disc jockey? The belt drive turntables have a motor that drives the platter through a rubber belt, which provides smoother playback and less motor noise. Perfect for home listening and hi-fi applications. `,
       },
       {
@@ -130,7 +130,7 @@ const menu = [
         title: "Audio Interface Mixer",
         category: "Mixers",
         price: 140,
-        img: "./assets/mixer3.jpg",
+        img: "./assets/images/mixer3.jpg",
         desc: `This compact audio interface mixer is a must-have tool for DJs and music producers. With multiple inputs and intuitive software control, it allows you to create professional-sounding mixes and recordings on your computer or laptop. Also perfect for recording a podcast.`,
       },
       {
@@ -138,7 +138,7 @@ const menu = [
         title: "Powered Speakers",
         category: "Speakers&Amp",
         price: 40,
-        img: "./assets/speaker2.jpg",
+        img: "./assets/images/speaker2.jpg",
         desc: `This powered speaker is a must-have for any DJ or musician who needs to amplify their sound. With its built-in power amplifier, it eliminates the need for external amplifiers and reduces setup time and complexity. Featuring high-quality sound and a durable design, this powered speaker is an essential tool for any live performance or event.`,
       },
       {
@@ -146,7 +146,7 @@ const menu = [
         title: "Stereo Amplifiers",
         category: "Speakers&Amp",
         price: 125,
-        img: "./assets/amp1.jpg",
+        img: "./assets/images/amp1.jpg",
         desc: ` Whether you're listening to your favorite album, streaming music, or watching a movie, this powerful stereo amplifier enhances your listening experience with high-quality sound and sleek design..`,
       },
       {
@@ -154,7 +154,7 @@ const menu = [
         title: "Multichannel Amplifiers",
         category: "Speakers&Amp",
         price: 140,
-        img: "./assets/amp.jpg",
+        img: "./assets/images/amp.jpg",
         desc: `This multichannel amplifier is a powerful tool for live sound reinforcement. With multiple channels and high-quality sound, it allows you to create professional-sounding mixes that sound great in any venue.`,
       },
       {
@@ -162,7 +162,7 @@ const menu = [
         title: "Cables",
         category: "Accessories",
         price: 0,
-        img: "./assets/cables.jpg",
+        img: "./assets/images/cables.jpg",
         desc: `Audio cables are an essential component of any DJ or musician's setup. They provide a reliable and high-quality connection between audio equipment, allowing you to transmit sound signals with minimal interference or distortion.`,
       },
       {
@@ -170,7 +170,7 @@ const menu = [
         title: "Headphones",
         category: "Accessories",
         price: 30,
-        img: "./assets/headphones1.jpg",
+        img: "./assets/images/headphones1.jpg",
         desc: `With various types and styles available, headphones provide a reliable and comfortable way to hear your mixes in detail. From noise-cancelling models, to wireless options for freedom of movement, headphones are an essential tool for sound quality and accuracy.`,
       },
       {
@@ -178,7 +178,7 @@ const menu = [
         title: "Cartridges and Styluses",
         category: "Accessories",
         price: 10,
-        img: "./assets/cartridges.jpg",
+        img: "./assets/images/cartridges.jpg",
         desc: `Cartridges and styluses are essential components of any DJ's turntable setup. With various types and styles available, cartridges and styluses allow you to customize your sound and achieve optimal performance from your turntable.`,
       },
       {
@@ -186,7 +186,7 @@ const menu = [
         title: "Cases and Bags",
         category: "Accessories",
         price: 10,
-        img: "./assets/cases.jpg",
+        img: "./assets/images/cases.jpg",
         desc: `An essential tool for any musician or DJ who needs to move their equipment from one location to another. From sturdy hard cases to convenient backpacks, we have cases and bags to keep the equipment safe during transport.`,
       },
       {
@@ -194,7 +194,7 @@ const menu = [
         title: "Microphones",
         category: "Accessories",
         price: 15,
-        img: "./assets/microphone.jpg",
+        img: "./assets/images/microphone.jpg",
         desc: `From dynamic microphones for live performances to condenser microphones for recording in a studio, we provide microphones as an essential tool for quality and clarity.`,
       },
       {
@@ -202,7 +202,7 @@ const menu = [
         title: "Powered Mixer",
         category: "Mixers",
         price: 180,
-        img: "./assets/mixer4.jpg",
+        img: "./assets/images/mixer4.jpg",
         desc: `This powered mixer is a powerful all-in-one solution for live sound reinforcement. With built-in power amplifier, multiple channels, and built-in effects, it creates professional-sounding mixes that sound great in any venue.`,
       },
   ];

@@ -145,6 +145,15 @@ p {
   padding: 0.5rem 1rem;
 }
 
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 2em;
+  color: var(--clr-grey-1)
+}
+.title span {
+  color: var(--clr-gold);
+} 
 
 /*************************
   NAVIGATION
@@ -370,6 +379,77 @@ header {
 /*************************
   EQUIPMENT SECTION
 **************************/
+.section-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* Menu Card */
+.menu-card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  padding: 1.33rem;
+}
+
+.photo {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-bottom: 3px solid var(--clr-gold);
+}
+
+.menu-content {
+  padding: 1rem;
+}
+
+.menu-title {
+  color: var(--clr-grey-1);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.menu-item {
+  width: 100%;
+  max-width: 300px;
+}
+
+.price {
+  color: var(--clr-grey);
+  font-weight: bold;
+}
+
+/* Filter buttons*/
+.btn-container {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.filter-btn {
+  background: transparent;
+  border-color: var(--clr-gold);
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  border-radius: var(--radius);
+  padding: 0.375rem 0.75rem;
+  color: var(--clr-gold);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.filter-btn:hover {
+  background: var(--clr-gold);
+  color: var(--clr-white);
+  box-shadow: 0 0 12px rgba(231, 178, 2, 0.7) inset;
+}
 
 
 
@@ -392,6 +472,27 @@ header {
 **************************/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -405,7 +506,7 @@ main {
 
 
 /* sections and title */
-.title h2 {
+/* .title h2 {
   text-align: center;
   text-transform: uppercase;
   padding-top: 2em;
@@ -422,17 +523,13 @@ main {
 #equipment, #faq {
   background: var(--clr-white);
 }
+ */
 
 
-
-/*Equipment*/
-.equipment{
-  height: fit-content;
-}
 
 /*Contact Us*/
 
-#contact{
+/* #contact{
   background-image: url(assets/coverimage.jpg);
 }
 
@@ -486,14 +583,14 @@ input[type=submit]:hover {
   color: var(--clr-white);
   background: var(--clr-primary-2);
 }
-
+ */
 
 /*
 =============== 
 Questions
 ===============
 */
-#faq{
+/* #faq{
   height: fit-content;
   background-image: url("/assets/musicnotes.png");
   background-position: center;
@@ -542,10 +639,10 @@ Questions
 }
 .question-text p {
   margin-bottom: 0;
-}
+} */
 
 /* hide text */
-.question-text {
+/* .question-text {
   display: none;
 }
 .show-text .question-text {
@@ -559,9 +656,9 @@ Questions
 }
 .show-text .plus-icon {
   display: none;
-} 
+}  */
 
-
+/* 
 
 footer {
   background: #441C55;
@@ -607,69 +704,12 @@ footer p {
     transform: scale(1);
   }
 }
+ */
 
-/*
-=============== 
-Menu
-===============
-*/
-.btn-container {
-  margin-bottom: 4rem;
-  display: flex;
-  justify-content: center;
-}
-.filter-btn {
-  background: transparent;
-  border-color: var(--clr-gold);
-  font-size: 1rem;
-  text-transform: capitalize;
-  margin: 0 0.5rem;
-  letter-spacing: 1px;
-  border-radius: var(--radius);
-  padding: 0.375rem 0.75rem;
-  color: var(--clr-gold);
-  cursor: pointer;
-  transition: var(--transition);
-}
-.filter-btn:hover {
-  background: var(--clr-gold);
-  color: var(--clr-white);
-}
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-  display: grid;
-  gap: 5rem 5rem;
-  justify-items: center;
-}
-.menu-item {
-  display: grid;
-  gap: 1rem 2rem;
-  max-width: 25rem;
-}
-.photo {
-  object-fit: cover;
-  height: 200px;
-  border: 0.25rem solid var(--clr-gold);
-  border-radius: var(--radius);
-}
-.item-info header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 0.5px dotted var(--clr-grey-5);
-}
-.item-info h4 {
-  margin-bottom: 0.5rem;
-}
-.price {
-  color: var(--clr-gold);
-}
-.item-text {
-  margin-bottom: 0;
-  padding-top: 1rem;
-}
-@media only screen and (max-width: 600px){
+
+
+
+/* @media only screen and (max-width: 600px){
   .btn-container {
     flex-direction: column;
     gap: 1em;
@@ -679,9 +719,9 @@ Menu
   .img-about{
     flex-direction: column;
   }
-}
+} */
 
-
+/* 
 @media screen and (min-width: 768px) {
   .menu-item {
     grid-template-columns: 225px 1fr;
@@ -700,4 +740,6 @@ Menu
   .photo {
     height: 150px;
   }
-}
+} */
+
+ */
