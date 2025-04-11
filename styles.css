@@ -320,6 +320,7 @@ header {
 **************************/
 
 .about-container{
+  text-align: center;
   padding: 5em 3em 4em 3em;
   width: 75%;
   margin: auto;
@@ -397,7 +398,6 @@ header {
   text-transform: capitalize;
   margin: 0 0.5rem;
   letter-spacing: 1px;
-  border-radius: var(--radius);
   padding: 0.375rem 0.75rem;
   color: var(--clr-gold);
   cursor: pointer;
@@ -459,8 +459,12 @@ header {
 
 .stars {
   color: var(--clr-gold);
-  font-size: 1rem;
-  margin: 0.5rem 0;
+  display: inline-block;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.menu-card:hover .stars {
+  text-shadow: 0 0 6px rgba(247, 201, 72, 0.8);
 }
 
 .price {
@@ -486,8 +490,9 @@ header {
 .toggle-btn {
   margin-top: 0.5rem;
   font-size: 0.85rem;
+  width: 110px;
   padding: 0.3rem 0.7rem;
-  border-bottom: 2px solid var(--clr-accent);
+  border-bottom: 2px solid var(--clr-grey-2);
   background-color: transparent;
   color: var(--clr-grey-2);
   cursor: pointer;
@@ -499,17 +504,88 @@ header {
   color: white;
 }
 
-
-
-
-
 /*************************
   CONTACT SECTION
 **************************/
+#contact {
+  background-color: white;
+}
+
+.contactsubtitle {
+  text-align: center;
+  font-size: 1em;
+  padding: 2em;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+  align-items: stretch;
+}
+
+.contact-container > img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border: 5px solid var(--clr-accent);
+}
+
+.contactus {
+  width: 50%;
+  padding: 2em;
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  gap: 1rem;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-wrapper {
+  text-align: center;
+}
+
+input[type=submit] {
+  text-transform: uppercase;
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 1px solid var(--clr-gold);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type=submit]:hover {
+  color: var(--clr-white);
+  background: var(--clr-primary-2);
+  border: 1px solid var(--clr-accent);
+}
 
 /*************************
   FAQ SECTION
 **************************/
+
+
+
+
+
+
+
+
 
 /*************************
   FOOTER
@@ -519,7 +595,37 @@ header {
   MEDIA QUERIES
 **************************/
 
+@media only screen and (max-width: 600px){
+  /* about section images */
+  .hide-image{
+    display: none;
+  }
+}
 
+@media (max-width: 768px) {
+  /* equipment menu */
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .filter-btn {
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  /* contact  */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-container > img,
+  .contactus {
+    width: 100%;
+  }
+}
 
 
 
@@ -551,160 +657,6 @@ main {
   display: grid;
   place-items: center;
 }
-
-
-/* sections and title */
-/* .title h2 {
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 2em;
-}
-.title span {
-  color: var(--clr-gold);
-} 
-
-#about,
-#contact,
-#faq {
-  height: fit-content;
-}
-#equipment, #faq {
-  background: var(--clr-white);
-}
- */
-
-
-
-/*Contact Us*/
-
-/* #contact{
-  background-image: url(assets/coverimage.jpg);
-}
-
-#contact h2, h3{
-  color: white;
-}
-
-.contactsubtitle{
-  text-align: center;
-  font-size: 1em;
-  padding: 2em;
-}
-
-.contactus{
-  width: 80%;
-  margin: auto;
-  padding: 3em;
-  background-color: #441C55;
-  color: var(--clr-grey-2);
-  border-radius: 1.33em;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  text-transform: uppercase;
-  background: transparent;
-  color: var(--clr-white);
-  padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
-  display: inline-block;
-  transition: var(--transition);
-  font-size: 0.875rem;
-  border: 2px solid var(--clr-white);
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
-}
-
-input[type=submit]:hover {
-  color: var(--clr-white);
-  background: var(--clr-primary-2);
-}
- */
-
-/*
-=============== 
-Questions
-===============
-*/
-/* #faq{
-  height: fit-content;
-  background-image: url("/assets/musicnotes.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.section-center {
-  max-width: var(--fixed-width);
-  padding: 3em;
-}
-.question {
-  background: var(--clr-white);
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  margin-bottom: 2rem;
-}
-.question-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: capitalize;
-  padding-bottom: 1rem;
-}
-.question-title p {
-  margin-bottom: 0;
-  letter-spacing: var(--spacing);
-  color: var(--clr-grey-1);
-}
-.question-btn {
-  font-size: 1.5rem;
-  background: transparent;
-  border-color: transparent;
-  cursor: pointer;
-  color: var(--clr-gold);
-  transition: var(--transition);
-}
-.question-btn:hover {
-  transform: rotate(90deg);
-  color: var(--clr-primary-2);
-}
-.question-text {
-  padding: 1rem 0 1.5rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-.question-text p {
-  margin-bottom: 0;
-} */
-
-/* hide text */
-/* .question-text {
-  display: none;
-}
-.show-text .question-text {
-  display: block;
-}
-.minus-icon {
-  display: none;
-}
-.show-text .minus-icon {
-  display: inline;
-}
-.show-text .plus-icon {
-  display: none;
-}  */
 
 /* 
 
