@@ -665,7 +665,7 @@ input[type=submit]:hover {
 **************************/
 footer {
   background: #2A1B31;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 2rem;
 }
 
 footer p {
@@ -676,9 +676,40 @@ footer p {
   margin-bottom: 0;
 }
 
+.footer-container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
 
+.footer-list ul >li {
+  font-size: 14px;
+  color:var(--clr-grey-2);
+  text-align: left; 
+  padding-top: 1rem;
+}
 
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 0;
+  font-size: 2rem;
+}
 
+.footer-icons a:hover{
+  transform: scale(1.15);
+}
+
+.copyright{
+  font-size: 14px;
+  color: var(--clr-grey-2);
+}
 
 /*************************
   MEDIA QUERIES
@@ -714,111 +745,61 @@ footer p {
   .contactus {
     width: 100%;
   }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
+  .question-btn {
+    font-size: 1rem;
   }
-}
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
 
-/* 
-
-
-
-.top-link {
-  font-size: 1.25rem;
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background: #DC9200;
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius);
-  color: var(--clr-white);
-  animation: bounce 2s ease-in-out infinite;
-  visibility: hidden;
-  z-index: -100;
-}
-.show-link {
-  visibility: visible;
-  z-index: 100;
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
+  /* FAQ */
+  #faq .section-center {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
-  50% {
-    transform: scale(1.5);
+
+  .question {
+    max-width: 100%;
+    margin: 0 auto;
   }
-  100% {
-    transform: scale(1);
+
+  .question-title {
+    font-size: 1rem;
   }
-}
- */
 
+  #faq .section-center {
+    gap: 1rem;
+  }
 
-
-
-/* @media only screen and (max-width: 600px){
-  .btn-container {
+  /* footer  */
+  .footer-container {
     flex-direction: column;
-    gap: 1em;
-    width: 15em;
-    margin: auto;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
   }
-  .img-about{
-    flex-direction: column;
-  }
-} */
 
-/* 
-@media screen and (min-width: 768px) {
-  .menu-item {
-    grid-template-columns: 225px 1fr;
-    gap: 0 1.25rem;
-    max-width: 40rem;
+  .footer-list ul > li {
+    text-align: center;
+    padding: 0.5rem 0;
   }
-  .photo {
-    height: 175px;
+
+  .footer-icons {
+    gap: 2rem;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
   }
+
+  .footer-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .copyright {
+    font-size: 12px;
+    padding: 1rem 0;
+  }  
 }
-@media screen and (min-width: 1200px) {
-  .section-center {
-    width: 95vw;
-    grid-template-columns: 1fr 1fr;
-  }
-  .photo {
-    height: 150px;
-  }
-} */
 
- */
+
+
