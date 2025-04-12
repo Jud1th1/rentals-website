@@ -579,17 +579,106 @@ input[type=submit]:hover {
   FAQ SECTION
 **************************/
 
+#faq{
+  height: fit-content;
+  background-image: url("/assets/images/musicnotes.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+#faq .section-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.question {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
 
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
 
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: var(--clr-gold);
+  transition: var(--transition);
+  font-size: 1.25rem;
+}
 
+.question-btn:hover {
+  transform: rotate(90deg);
+  color: var(--clr-primary-2);
+  filter: drop-shadow(0 0 3px var(--clr-grey-2));
+}
 
+.question-text {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  line-height: 1.6;
+  color: var(--clr-grey-1);
+  display: none;
+}
 
+.question-text p {
+  margin-bottom: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+} 
+
+.show-text .question-text {
+  display: block;
+}
+
+.minus-icon {
+  display: none;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}  
 
 /*************************
   FOOTER
 **************************/
+footer {
+  background: #2A1B31;
+  padding: 5rem 1rem;
+}
+
+footer p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-bottom: 0;
+}
+
+
+
+
 
 /*************************
   MEDIA QUERIES
@@ -660,17 +749,7 @@ main {
 
 /* 
 
-footer {
-  background: #441C55;
-  padding: 5rem 1rem;
-}
-footer p {
-  color: var(--clr-white);
-  text-align: center;
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  margin-bottom: 0;
-}
+
 
 .top-link {
   font-size: 1.25rem;
