@@ -4,7 +4,6 @@
 :root {
   /* primary colors*/
   --clr-primary-1: hsl(280, 50%, 22%);
-  --clr-primary-1: hsl(316, 35%, 56%);
   --clr-primary-2: #1e1e1e;
 
   /* grays */
@@ -300,7 +299,7 @@ header {
 .container h1 {
   color: var(--clr-white);
   text-transform: uppercase;
-  font-family: 'Vina Sans', sans-serif;
+  font-family: 'Vina Sans',  cursive, sans-serif;
 }
 
 .container p {
@@ -407,6 +406,12 @@ header {
   background: var(--clr-gold);
   color: var(--clr-white);
   box-shadow: 0 0 12px rgba(231, 178, 2, 0.7) inset;
+}
+
+.filter-btn:focus,
+.toggle-btn:focus {
+  outline: 2px dashed var(--clr-accent);
+  outline-offset: 2px;
 }
 
 .section-center {

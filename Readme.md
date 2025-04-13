@@ -1,96 +1,83 @@
 # BeatWise Rental Website
 
-
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [Features](#features)
   - [Screenshot](#screenshot)
   - [Links](#links)
+  - [Tech Stack](#tech-stack)
 - [My process](#my-process)
-  - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-
+  - [Resources](#resources)
 
 ## Overview
-A website for disk jockey equipment rentals  
 
-### The challenge
+BeatWise Rentals is a fictional DJ and event equipment rental company. This site was designed to showcase dynamic filtering, accessibility best practices, and JavaScript DOM manipulation.
+
+### Features
 
 Users should be able to:
 
--	Find out more about BeatWise the company, and their available equipment for rental, contact the company through a submit form, and get frequently asked questions answered.
--	Navigate the page using the nav bar links
--	Access a functional navbar hamburger menu through mobile screens
--	Use filter buttons for the equipment menu for easier access navigating through the list of items   
--	Press the plus buttons on FAQs questions to read the answers of frequently asked questions 
-
+- Learn about the BeatWise company and its offerings
+- Navigate seamlessly with a fixed, responsive navbar
+- Use a mobile hamburger menu for quick access
+- Filter equipment by category using custom JavaScript logic
+- Read equipment descriptions with a "Learn More" toggle effect
+- Submit inquiries using a clean, styled contact form
+- Access an interactive FAQ accordion with only one expanded answer at a time
+- Navigate back to top using a smooth scrolling scroll-up button
 
 ### Screenshot
 
 ![](./Screenshot.png)
-
 
 ### Links
 
 - Solution URL: https://github.com/Jud1th1/rentals-website
 - Live Site URL: https://beatwiserentals.netlify.app/
 
+### Tech Stack
+
+- HTML5 (Semantic structure)
+- CSS3 (Flexbox & Grid, media queries, custom properties)
+- Vanilla JavaScript (ES6+, modular functions)
+- Responsive Design (Mobile-first approach)
+- Font Awesome (Accessible iconography)
+
 ## My process
--	To start this website, I followed along with the FreeCodeCamp slider tutorial for the base of my website. 
--	Together we set up the html, stylesheet and JavaScript. 
--	The first thing we did in JavaScriptwas add a dynamic date element to set the year in our footer dynamically without requiring us to go back into the code every year to update the code using the getFullYear method.
--	We created a navbar with the following features:
-    •	A fixed position at the top of the screen, and it changes its style when the user scrolls down the page.
-    •	A toggle button that shows and hides the links of the navigation menu.
--   Here are a few code snippets:
-    -	Element.getBoundingClientRect() to get the size and position of an element relative to the viewport.
-    -	window.pageYOffset to get the number of pixels the document has been scrolled vertically.
-    -	String.slice() to extract a section of a string without modifying the original string.
-    -	Element.classList to manipulate the classes of an element.
 
--	I also added a menu element here with the following features:
-    -	A list of items with their names, prices, and descriptions.
-    -	Buttons to filter the items by category.
--   Some code here includes the following concepts:
-    •	An array of objects to store the items and their properties.
-    •	A function to display the items and their details.
-    •	Array methods like Array.filter() and Array.map() to filter and transform the array of items.
-    •	Template literals to create HTML elements dynamically.
-    •	Event delegation to handle events on dynamically created elements.
-    
--   The last JavaScript code was for the FAQs section to add a click event listener to the questions. 
--   When the user clicks on a question, the code toggles the visibility of the answer for that question and hides the answer for all other questions using the classList.toggle() method. 
--   As I went along, I updated the stylesheet to reflect the color scheme and branding of the BeatWise company that my partner and I picked before setting up this project. The theme included a purple and gold, "fun", tech modern vibe. 
-
-
-### Built with
-
-- HTML
-- Flexbox
-- CSS
-- Javascript
-- Desktop to Mobile workflow
-
+- This project began as a FreeCodeCamp tutorial on sliders and grew into a fully responsive, branded experience. The original inspiration used Element.getBoundingClientRect() for dynamic height and window.pageYOffset for scroll detection. From there:
+  - Added a dynamic footer date using getFullYear()
+  - Created a responsive navigation bar with scroll-based behavior and hamburger toggle
+  - Built a fully filterable equipment section using an array of objects and Array.filter() / Array.map()
+  - Used event delegation to handle dynamically generated "Learn More" toggle buttons
+  - Designed and styled a FAQ accordion using classList.toggle() and DOM traversal
+  - Updated all layout styling with a custom purple and gold color palette to match branding
+  - Ensured responsive and accessible design across mobile and desktop
 
 ### What I learned
 
--	Using the getFullYear method to dynamically display the current year in the footer.
--	Creating a navbar with fixed positioning, style changes on scroll, a toggle button, and a link to the top of the page.
--	Using JavaScript concepts to manipulate and interact with HTML elements.
--	Adding a menu element with items, prices, and descriptions, as well as buttons to filter the items by category.
--	Implementing event delegation to handle events on dynamically created elements.
--	Also: a big takeaway is  to remerb that javascript implement inline styling and can override my CSS code. 
-
+- How to structure clean, modular JavaScript for UI components
+- Styling hover, focus, and active states for accessibility
+- Dynamic rendering with .map() and filtering with .filter()
+- Importance of mobile-first design and layout debugging
+- Customizing iconography and scroll behavior for better UX
+- Using DOM methods to handle real-time interactivity and animations
+- JS inline styles can override external CSS — always inspect those overrides!
 
 ### Continued development
 
-I would love to continue improving the existing features and functionality of the website, such as optimizing the website's performance, improving its accessibility, and enhancing its design and user experience.
-
-
+- In the future, I’d love to:
+  - Add local storage or Firebase for user form submissions
+  - Implement real-time equipment availability status
+  - Add unit tests for DOM-based functions
+  - Further enhance accessibility (e.g., skip links, keyboard-only nav)
+  - Polish SEO metadata and add Open Graph tags
 
 ### Useful resources
 
-- https://www.youtube.com/watch?v=3PHXvlpOkf4&t=423s   //Slider, menu, questions tutorials all were used in this project
+- [https://www.youtube.com/watch?v=3PHXvlpOkf4&t=423s] FreeCodeCamp Slider/Menu/FAQ Tutorial
+- [https://developer.mozilla.org/en-US/] MDN Web Docs
+- [https://css-tricks.com/] CSS Tricks

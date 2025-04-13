@@ -1,27 +1,21 @@
-// Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
-// pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
-// slice extracts a section of a string without modifying original string
-//offsetTop - A Number, representing the top position of the element, in pixels
-
 // ********** set date ************
 const date = document.getElementById('date');
 date.innerHTML = new Date().getFullYear();
 
-// ********** close links ************
+// ********** Navigation Toggle ************
 const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", function () {
-   // linksContainer.classList.toggle("show-links"); - this method is not dynamic, it has a fixed height
    const containerHeight = linksContainer.getBoundingClientRect().height; //this is parent it will be default height of 0
-   const linksHeight = links.getBoundingClientRect().height; //this will get our link height (console log and try removing and adding more links to see how it changes)
+   const linksHeight = links.getBoundingClientRect().height; //this will get our link height 
    
     if (containerHeight === 0) {
     linksContainer.style.height = `${linksHeight}px`;
     } 
     else{ //if the links are already open
-        linksContainer.style.height = 0; //we must override this in css for bigger screens
+        linksContainer.style.height = 0; 
     }
 });
 
@@ -31,7 +25,7 @@ const topLink = document.querySelector(".top-link");
 
 window.addEventListener("scroll", function () {
     const scrollHeight = window.pageYOffset;
-    const navHeight = navbar.getBoundingClientRect().height; //get height of navbar
+    const navHeight = navbar.getBoundingClientRect().height; 
     
     if (scrollHeight > navHeight) {
       navbar.classList.add("fixed-nav"); //as we scroll down, the fixed nav will stay
@@ -40,23 +34,15 @@ window.addEventListener("scroll", function () {
     }
     // setup back to top link
     //mobile
-    if (scrollHeight > 500) {
-      console.log("helo");
-  
-      topLink.classList.add("show-link");
-    } else {
-      topLink.classList.remove("show-link");
-    }
-  });
-  
+    topLink.classList.toggle("show-link", scrollHeight > 500);
+});
 
-// ********** smooth scroll ************
-// select links
+
+// ********** smooth scroll for nav links************
 const scrollLinks = document.querySelectorAll(".scroll-link");
 
 scrollLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-        // prevent default
         e.preventDefault();
         // navigate to specific spot
         const id = e.currentTarget.getAttribute("href").slice(1);
@@ -68,7 +54,7 @@ scrollLinks.forEach((link) => {
         let position = element.offsetTop - navHeight;
 
     if (!fixedNav) {
-      position = position - navHeight; //now we can see the top of the section 
+      position = position - navHeight;  
     }
     if (navHeight > 82) {
       position = position + containerHeight;
@@ -83,7 +69,7 @@ scrollLinks.forEach((link) => {
   });
 });
 
-//********************************* Menu ***********/
+//***************** Menu *********************/
 const menu = [
     {
       id: 1,
@@ -221,20 +207,19 @@ const menu = [
         desc: `This powered mixer is a powerful all-in-one solution for live sound reinforcement. With built-in power amplifier, multiple channels, and built-in effects, it creates professional-sounding mixes that sound great in any venue.`,
       },
   ];
-  // get parent element
+  
+
   const sectionCenter = document.querySelector(".section-center");
   const btnContainer = document.querySelector(".btn-container");
   // display all items when page loads
   window.addEventListener("DOMContentLoaded", function () {
-    diplayMenuItems(menu);
+    displayMenuItems(menu);
     displayMenuButtons();
   });
   
-  function diplayMenuItems(menuItems) {
-    let displayMenu = menuItems.map(function (item) {
-      // console.log(item);
-  
-      return `
+  function displayMenuItems(menuItems) {
+    let displayMenu = menuItems.map(function (item) { 
+      return ` 
       <article class="menu-item menu-card">
         <img src=${item.img} alt=${item.title} class="photo" />
         <div class="menu-content">
@@ -247,7 +232,6 @@ const menu = [
       </article>`;
   });
     displayMenu = displayMenu.join("");
-    // console.log(displayMenu);
   
     sectionCenter.innerHTML = displayMenu;
   }
@@ -284,9 +268,9 @@ const menu = [
           }
         });
         if (category === "all") {
-          diplayMenuItems(menu);
+          displayMenuItems(menu);
         } else {
-          diplayMenuItems(menuCategory);
+          displayMenuItems(menuCategory);
         }
       });
     });
@@ -301,35 +285,11 @@ const menu = [
   });
   
 
-
-  //********************************* Questions ***********/
-  //using selectors inside the element
-//traversing the dom
-
-
-//1. Traversing the dom
-//select all the buttons
-    //const btns = document.querySelectorAll(".question-btn");
-//add event listener
-//also because btn is a parameter you have to add it in the function then access the event function (e)
-    //btns.forEach(function(btn){
-        //btn.addEventListener("click", function(e){
-            //const question = e.currentTarget.parentElement.parentElement //we are referencing the parent of the question and question title
-            //question.classList.toggle("show-text");
-        //});
-    //});
-//traverse the dom (moving up and down the dom tree)
-
-
-//2.Use Selectors inside the Element 
-//select questions NOT button
 const questions = document.querySelectorAll(".question");
-//We want to loop over that 
 questions.forEach(function(question){
-    //console.log(question); //for testing
-    //select button from within question NOT the document or it will select ALL
+  
     const btn = question.querySelector(".question-btn");
-    //event listener
+   
     btn.addEventListener("click", function(){
 
         questions.forEach(function(item){
@@ -337,15 +297,8 @@ questions.forEach(function(question){
                 item.classList.remove("show-text");
             }
         });
-        //use question: that is the name of the parameter it will reference the button within the article
         question.classList.toggle("show-text");
     })
 
 });
 
-//add functionality that when another question is open, it closes the other by default do this by selecting question again in the event listener
-    //questions.forEach(function(item){ //item is referencing the SAME thing as question, we just changed the name
-        //if(item !== question){ //if item does not match article button that we are clicking then remove that text 
-           //item.classList.remove("show-text");
-        //} 
-    //});
