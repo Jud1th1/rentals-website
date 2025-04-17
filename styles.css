@@ -157,6 +157,26 @@ p {
 /*************************
   NAVIGATION
 **************************/
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: black;
+  color: white;
+  z-index: 1000;
+}
 
 nav {
   background: var(--clr-white);
@@ -493,20 +513,20 @@ header {
 }
 
 .toggle-btn {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  width: 110px;
-  padding: 0.3rem 0.7rem;
+  background: none;
+  border: none;
   border-bottom: 2px solid var(--clr-grey-2);
-  background-color: transparent;
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
   color: var(--clr-grey-2);
   cursor: pointer;
-  transition: var(--transition);
+  text-align: left;
 }
 
 .toggle-btn:hover {
   background-color: var(--clr-accent);
   color: white;
+  outline-offset: 2px;
 }
 
 /*************************

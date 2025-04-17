@@ -227,7 +227,7 @@ const menu = [
           <div class="stars">${item.rating}</div> 
           <p class="price">$${item.price}</p>
           <p class="item-text">${item.desc}</p>
-          <p class="toggle-btn">Learn More+ </p>
+          <button class="toggle-btn">Learn More+</button>
         </div>
       </article>`;
   });

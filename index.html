@@ -21,6 +21,8 @@
 
   
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!--header-->
     <header id="home">
       <!--navbar-->
@@ -130,12 +132,12 @@
           <article class="question">
               <div class="question-title">
               <p>What equipment do I need for my specific event?</p>
-              <button type="button" class="question-btn">
+              <button type="button" class="question-btn" aria-label="Toggle FAQ answer visibility">
                   <span class="plus-icon">
-                      <i class="far fa-plus-square"></i>
+                      <i class="far fa-plus-square" role="presentation"></i>
                   </span>
                   <span class="minus-icon">
-                      <i class="far fa-minus-square"></i>
+                      <i class="far fa-minus-square" role="presentation"></i>
                   </span>
               </button>
               </div>
@@ -151,12 +153,12 @@
            <article class="question">
             <div class="question-title">
             <p>Can I rent equipment for a single day or do I need to rent it for a longer period of time?</p>
-            <button type="button" class="question-btn">
+            <button type="button" class="question-btn" aria-label="Toggle FAQ answer visibility">
                 <span class="plus-icon">
-                    <i class="far fa-plus-square"></i>
+                    <i class="far fa-plus-square" role="presentation"></i>
                 </span>
                 <span class="minus-icon">
-                    <i class="far fa-minus-square"></i>
+                    <i class="far fa-minus-square" role="presentation"></i>
                 </span>
             </button>
             </div>
@@ -170,12 +172,12 @@
          <article class="question">
           <div class="question-title">
           <p>How do I set up and operate the equipment I am renting?</p>
-          <button type="button" class="question-btn">
+          <button type="button" class="question-btn" aria-label="Toggle FAQ answer visibility">
               <span class="plus-icon">
-                  <i class="far fa-plus-square"></i>
+                  <i class="far fa-plus-square" role="presentation"></i>
               </span>
               <span class="minus-icon">
-                  <i class="far fa-minus-square"></i>
+                  <i class="far fa-minus-square"role="presentation"></i>
               </span>
           </button>
           </div>
@@ -191,12 +193,12 @@
        <article class="question">
         <div class="question-title">
         <p>Is delivery and setup included in the rental price?</p>
-        <button type="button" class="question-btn">
+        <button type="button" class="question-btn" aria-label="Toggle FAQ answer visibility">
             <span class="plus-icon">
-                <i class="far fa-plus-square"></i>
+                <i class="far fa-plus-square" role="presentation"></i>
             </span>
             <span class="minus-icon">
-                <i class="far fa-minus-square"></i>
+                <i class="far fa-minus-square" role="presentation"></i>
             </span>
         </button>
         </div>
@@ -210,12 +212,12 @@
      <article class="question">
       <div class="question-title">
       <p>Is there a deposit required to rent equipment?</p>
-      <button type="button" class="question-btn">
+      <button type="button" class="question-btn" aria-label="Toggle FAQ answer visibility">
           <span class="plus-icon">
-              <i class="far fa-plus-square"></i>
+              <i class="far fa-plus-square" role="presentation"></i>
           </span>
           <span class="minus-icon">
-              <i class="far fa-minus-square"></i>
+              <i class="far fa-minus-square" role="presentation"></i>
           </span>
       </button>
       </div>
@@ -229,12 +231,12 @@
    <article class="question">
     <div class="question-title">
     <p>What is the cancellation policy for equipment rentals?</p>
-    <button type="button" class="question-btn">
+    <button type="button" class="question-btn" aria-label="Toggle FAQ answer visibility">
         <span class="plus-icon">
-            <i class="far fa-plus-square"></i>
+            <i class="far fa-plus-square" role="presentation"></i>
         </span>
         <span class="minus-icon">
-            <i class="far fa-minus-square"></i>
+            <i class="far fa-minus-square" role="presentation"></i>
         </span>
     </button>
     </div>
@@ -254,20 +256,20 @@
       <p>Connect With Us</p>
       <div class="footer-icons">
        <!--  facebook -->
-       <a href="#" target="_blank" rel="noopener noreferrer"  aria-label="Facebook">
-         <i class="fa-brands fa-facebook" style="color: #d4af37;"></i>
-       </a> 
+       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+        <i class="fa-brands fa-facebook" aria-hidden="true" role="presentation" style="color: #d4af37;"></i>
+      </a>      
        <!--Youtube-->
-       <a href="#" target="_blank" rel="noopener noreferrer"  aria-label="Youtube">
-        <i class="fa-brands fa-youtube" style="color: #d4af37;"></i>
+       <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"  aria-label="Youtube" title="Youtube">
+        <i class="fa-brands fa-youtube" aria-hidden="true" role="presentation" style="color: #d4af37;"></i>
        </a>  
        <!--  instagram -->
-       <a href="#" target="_blank" rel="noopener noreferrer"  aria-label="Instagram">
-        <i class="fa-brands fa-instagram" style="color: #d4af37;"></i>
+       <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"  aria-label="Instagram" title="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true" role="presentation" style="color: #d4af37;"></i>
        </a>  
        <!-- twitter -->
-         <a href="#" target="_blank" rel="noopener noreferrer"  aria-label="Twitter">
-          <i class="fa-brands fa-twitter" style="color: #d4af37;"></i>
+         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"  aria-label="Twitter" title="Twitter">
+          <i class="fa-brands fa-twitter" aria-hidden="true" role="presentation" style="color: #d4af37;"></i>
         </a>        
       </div>
       <div class="footer-container">
@@ -302,9 +304,9 @@
       <p class="copyright">copyright &copy; BeatWise Rental Company<span id="date"></span>.all rights reserved</p>
     </footer>
     <!--back to top button-->
-    <a href="#home" class="scroll-link top-link">
-      <i class="fas fa-arrow-up"></i>
-    </a>
+    <a href="#home" class="scroll-link top-link" aria-label="Scroll back to top" title="Scroll to top">
+      <i class="fas fa-arrow-up" aria-hidden="true" role="presentation"></i>
+    </a>    
 
     <!-- javascript -->
     <script src="app.js"></script>
